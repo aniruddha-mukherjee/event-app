@@ -1,5 +1,6 @@
 package com.ani.backend.registration;
 
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -20,7 +21,13 @@ public class RegistrationService {
         return repo.findAll();
     }
 
-    public void unregister(Long id) {
+    @Transactional
+    public void deleteById(Long id) {
         repo.deleteById(id);
+    }
+
+    @Transactional
+    public void deleteByName(String name) {
+        repo.deleteByName(name);
     }
 }

@@ -24,8 +24,16 @@ public class RegistrationController {
         return service.listAll();
     }
 
+    // delete by id
     @DeleteMapping("/{id}")
-    public void unregister(@PathVariable Long id) {
-        service.unregister(id);
+    public void deleteById(@PathVariable Long id) {
+        service.deleteById(id);
     }
+
+    // delete by name
+    @DeleteMapping("/by-name/{name}")
+    public void deleteByName(@PathVariable String name) {
+        service.deleteByName(name);
+    }
+
 }
