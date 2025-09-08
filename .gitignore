@@ -1,0 +1,13 @@
+# .gitignore
+# Java / Maven
+target/
+*.class
+.idea/
+*.iml
+/.mvn
+# Node
+node_modules/
+frontend/dist/
+# OS
+.DS_Store
+
